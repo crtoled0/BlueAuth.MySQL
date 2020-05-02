@@ -1,0 +1,13 @@
+apps:
+    - script   :  gradlew
+      name     : 'blueAuth-MySql'
+      instances: 2
+      args     : 
+                - 'bootRun'
+                - '-Pargs=--spring.profiles.active=local'
+      cwd: '.'
+      log_date_format: 'YYYY-MM-DD HH:mm Z',
+      exec_interpreter: 'none',
+      exec_mode: 'fork'
+
+      # --server.allowedOrigins=http://localhost:3000
